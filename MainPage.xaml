@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp21.MainPage"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             >
+
+    <toolkit:DockLayout>
+        <Grid toolkit:DockLayout.DockPosition="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" BackgroundColor="Aqua"/>
+            <Button Grid.Column="1" BackgroundColor="Blue"/>
+        </Grid>
+        <Grid toolkit:DockLayout.DockPosition="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" BackgroundColor="Red"/>
+            <Button Grid.Column="1" BackgroundColor="Gray"/>
+            <Button Grid.Column="2" BackgroundColor="Green"/>
+        </Grid>
+        <ScrollView toolkit:DockLayout.DockPosition="None">
+            <StackLayout >
+                <toolkit:DockLayout  WidthRequest="200" HeightRequest="200" >
+                    <StackLayout WidthRequest="200" HeightRequest="200" toolkit:DockLayout.DockPosition="Left" BackgroundColor="Gray"/>
+                    <StackLayout WidthRequest="200" HeightRequest="200" toolkit:DockLayout.DockPosition="Right" BackgroundColor="Red"/>
+                    <StackLayout WidthRequest="200" HeightRequest="200" toolkit:DockLayout.DockPosition="Top" BackgroundColor="Green"/>
+                    <StackLayout WidthRequest="200" HeightRequest="200" toolkit:DockLayout.DockPosition="Bottom" BackgroundColor="Yellow"/>
+                    <Image toolkit:DockLayout.DockPosition="None" Source="dotnet_bot.png"/>
+
+
+                </toolkit:DockLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </toolkit:DockLayout>
+
+</ContentPage>
